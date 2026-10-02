@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOLD · Colección por Serranía</title>
+<meta name="description" content="Chaquetas corporativas BOLD: Softshell y Aerofusion, diseñadas y producidas por Serranía.">
+
+<!-- ===== MINIATURA AL COMPARTIR (WhatsApp, correo) =====
+     Cambia TU-USUARIO y TU-REPOSITORIO por tu dirección real, en las 3 líneas.
+     La imagen va en img/preview.jpg — 1200 x 630 px, menos de 300 KB        -->
+<meta property="og:url" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/">
+<meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/img/preview.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Serranía">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="BOLD · Chaquetas Softshell y Aerofusion">
+<meta property="og:description" content="Dos chaquetas corporativas con personalización premium, diseñadas y producidas por Serranía.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/img/preview.jpg">
+<meta name="theme-color" content="#121E6C">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+<!--
+  ================================================================
+  IMAGENES (carpeta img/, al lado de este index.html)
+  ================================================================
+  img/logo-bold.png              → logo BOLD (versión oscura, fondo transparente)
+  img/portada.jpg                → foto grande de la portada (vertical)
+  img/preview.jpg                → miniatura al compartir (1200 x 630 px)
+
+  img/chaqueta-softshell/        → frente.jpg  posterior.jpg  lateral.jpg  lateral-2.jpg
+                                   y la 2a personalización, con sufijo -v2:
+                                   frente-v2.jpg  posterior-v2.jpg  lateral-v2.jpg  lateral-2-v2.jpg
+  img/chaqueta-aerofusion/       → frente.jpg  posterior.jpg  lateral.jpg  lateral-2.jpg
+
+  Si falta una foto de la 2a personalización, se muestra la de la primera.
+  ================================================================
+-->
+<style>
+:root{
+  --coral:#FF2847; --coral-osc:#d81736; --azul:#121E6C; --azul-2:#0b1348;
+  --gris:#6b7180; --linea:#e6e7ec; --humo:#f5f6f9; --blanco:#ffffff;
+  --radius:16px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Montserrat',system-ui,sans-serif;background:var(--blanco);color:var(--azul);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600}
+.pend{color:#2563eb;text-decoration:underline}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.hero__left{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:130px clamp(28px,5vw,88px) 130px}
+.hero__arcs{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero__arcs path{fill:none;stroke-linecap:round}
+.hero__arcs .a1{stroke:var(--humo);stroke-width:110;stroke-dasharray:1800;stroke-dashoffset:1800;animation:draw 2.4s var(--ease) .1s forwards}
+.hero__arcs .a2{stroke:var(--linea);stroke-width:1.5;stroke-dasharray:1800;stroke-dashoffset:1800;animation:draw 3s var(--ease) .5s forwards}
+.hero__arcs .a3{stroke:var(--coral);stroke-width:1.2;opacity:.6;stroke-dasharray:1800;stroke-dashoffset:1800;animation:draw 3.4s var(--ease) .9s forwards}
+.hero__arcs .dot{fill:var(--coral);opacity:0;animation:fade 1s ease 3.2s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:.95}}
+.hero__top{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:24px clamp(28px,5vw,88px)}
+.hero__logo{display:block;color:var(--azul);opacity:0;animation:up 1s var(--ease) .2s forwards}
+.hero__logo svg{height:30px;width:auto;display:block}
+.hero__top .eyebrow{color:var(--gris)}
+.hero__content{position:relative;z-index:3;max-width:600px}
+.hero__content>*{opacity:0;transform:translateY(24px);animation:up 1s var(--ease) forwards}
+.hero__content>*:nth-child(1){animation-delay:.3s}.hero__content>*:nth-child(2){animation-delay:.45s}
+.hero__content>*:nth-child(3){animation-delay:.6s}.hero__content>*:nth-child(4){animation-delay:.75s}
+.hero__content>*:nth-child(5){animation-delay:.9s}.hero__content>*:nth-child(6){animation-delay:1.05s}
+@keyframes up{to{opacity:1;transform:none}}
+.hero__kicker{display:inline-flex;align-items:center;gap:14px;color:var(--coral);margin-bottom:24px}
+.hero__kicker::before{content:"";width:46px;height:2px;background:var(--coral)}
+.marca{line-height:.9;margin-bottom:26px}
+.marca img{height:clamp(66px,9vw,118px);width:auto}
+.marca .w1{display:block;font-weight:800;font-size:clamp(3.2rem,8vw,7rem);letter-spacing:.04em;color:var(--azul)}
+.hero__hook{font-size:clamp(1.15rem,1.9vw,1.7rem);font-weight:300;max-width:30ch;line-height:1.35;margin-bottom:14px}
+.hero__hook em{font-style:italic;color:var(--coral);font-weight:400}
+.hero__sub{font-size:.95rem;color:var(--gris);margin-bottom:32px;max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 26px;border-radius:100px;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;transition:all .35s var(--ease)}
+.btn--coral{background:var(--coral);color:#fff}
+.btn--coral:hover{background:var(--coral-osc);transform:translateY(-2px)}
+.btn--line{border:1px solid var(--azul);color:var(--azul)}
+.btn--line:hover{background:var(--azul);color:#fff}
+.btn svg{width:16px;height:16px}
+.hero__right{position:relative;overflow:hidden;background:var(--humo)}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;transform:scale(1.1);animation:zoom 12s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero__curve{position:absolute;top:0;bottom:0;left:-1px;width:15%;height:100%;z-index:2;pointer-events:none}
+.hero__curve .fill{fill:var(--blanco)}
+.hero__curve .line{fill:none;stroke:var(--coral);stroke-width:1.6;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.6s var(--ease) 1s forwards}
+.hero__curve--h{display:none}
+.hero__ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--gris);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;background:repeating-linear-gradient(135deg,var(--humo) 0 14px,#eceef4 14px 15px)}
+.marquee{position:absolute;left:0;right:0;bottom:0;z-index:6;overflow:hidden;padding:17px 0;background:var(--azul)}
+.marquee__track{display:flex;gap:56px;width:max-content;animation:marq 30s linear infinite}
+.marquee__track span{font-size:.8rem;font-weight:700;letter-spacing:.46em;color:#fff;white-space:nowrap;display:flex;align-items:center;gap:56px}
+.marquee__track span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============ NAV ============ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea);transform:translateY(-100%);transition:transform .45s var(--ease)}
+.nav.show{transform:none}
+.nav__in{display:flex;align-items:center;justify-content:space-between;height:62px;gap:20px}
+.nav__logo{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:.16em;font-size:.85rem;white-space:nowrap}
+.nav__logo svg{height:22px;width:auto}
+.nav__logo span{padding-left:14px;border-left:1px solid var(--linea)}
+.nav__links{display:flex;gap:6px}
+.nav__links a{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:9px 16px;border-radius:100px;color:var(--gris);transition:.3s;white-space:nowrap}
+.nav__links a:hover{color:var(--azul)}
+.nav__links a.active{background:var(--coral);color:#fff}
+.nav__bar{position:absolute;left:0;bottom:0;height:2px;background:var(--coral);width:0}
+
+/* ============ INTRO ============ */
+.intro{padding:104px 0 56px}
+.intro .eyebrow{color:var(--coral);margin-bottom:16px;display:block}
+.intro h2{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:200;line-height:1.12;max-width:18ch}
+.intro h2 b{font-weight:700}
+.intro p{max-width:54ch;color:var(--gris);font-size:.98rem;margin-top:20px}
+.intro__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:end}
+.intro__tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.tag{font-size:.64rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:9px 15px;border-radius:100px;border:1px solid var(--linea);color:var(--gris)}
+
+/* ============ BARRA ============ */
+.bar{position:sticky;top:62px;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.bar-in{display:flex;align-items:center;gap:20px;height:62px}
+.chips{display:flex;gap:6px;overflow-x:auto;flex:1;scrollbar-width:none;padding:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{font-size:.72rem;font-weight:500;padding:9px 16px;border-radius:100px;color:var(--gris);white-space:nowrap;border:1px solid transparent;transition:.3s}
+.chip:hover{color:var(--azul);border-color:var(--linea)}
+.chip.active{background:var(--azul);color:#fff}
+.counter{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);white-space:nowrap}
+
+/* ============ PRODUCTOS ============ */
+.lista{display:block}
+.item{padding:72px 0;border-top:1px solid var(--linea);scroll-margin-top:128px}
+.item:first-child{border-top:0}
+.prod{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:48px;align-items:start}
+.prod__fotos{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.prod__fotos .slot{aspect-ratio:4/4.6;border-radius:var(--radius);background:var(--humo);border:1px solid var(--linea)}
+.prod__fotos .slot img{object-fit:contain;padding:10px}
+.prod__ref{position:absolute;left:14px;top:14px;z-index:3;background:var(--coral);color:#fff;padding:8px 14px;border-radius:100px;font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.prod__type{font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--coral);display:flex;align-items:center;gap:12px}
+.prod__type::before{content:"";width:28px;height:2px;background:var(--coral)}
+.prod__name{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:300;line-height:1.12;margin:12px 0 10px}
+.prod__name b{font-weight:700}
+.prod__desc{color:var(--gris);font-size:.92rem;max-width:60ch;margin-bottom:20px}
+.ficha{display:flex;flex-wrap:wrap;gap:20px 34px;margin-bottom:22px;padding:16px 0;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.ficha div span{display:block;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
+.ficha div b{font-size:.82rem;font-weight:600}
+.bloque h4{font-size:.64rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);margin-bottom:12px}
+.vars{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.var{padding:11px 18px;border-radius:100px;border:1px solid var(--linea);font-size:.74rem;font-weight:600;background:#fff;transition:.3s;color:var(--gris)}
+.var:hover{border-color:var(--azul);color:var(--azul)}
+.var.active{background:var(--azul);border-color:var(--azul);color:#fff}
+.perso{list-style:none;display:grid;gap:9px;margin-bottom:8px}
+.perso li{font-size:.84rem;display:grid;grid-template-columns:14px 1fr;gap:10px;line-height:1.45}
+.perso li::before{content:"";width:7px;height:7px;background:var(--coral);transform:rotate(45deg);margin-top:7px}
+.perso li b{font-weight:600;color:var(--azul)}
+
+/* Slots */
+.slot{position:relative;overflow:hidden;background:var(--humo);cursor:zoom-in}
+.slot img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),opacity .4s}
+.slot:hover img{transform:scale(1.04)}
+.slot-label{position:absolute;left:8px;bottom:8px;z-index:2;font-size:.56rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:rgba(255,255,255,.94);color:var(--azul);padding:4px 8px;border-radius:100px;pointer-events:none;border:1px solid var(--linea)}
+.slot .ph{display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:10px;color:var(--gris);background:repeating-linear-gradient(135deg,var(--humo) 0 14px,#eceef4 14px 15px)}
+.slot .ph span{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--azul)}
+.slot .ph small{font-size:.54rem;word-break:break-all;opacity:.8;max-width:95%}
+.slot .ph svg{width:26px;height:26px;opacity:.5}
+.slot.empty{cursor:default}
+.slot.empty img{display:none}
+.slot.empty .ph{display:flex}
+.slot.empty .slot-label{display:none}
+
+/* ============ CIERRE ============ */
+.closing{position:relative;background:var(--azul);color:#fff;text-align:center;padding:110px 0 74px;overflow:hidden}
+.closing::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--coral)}
+.closing .logo svg{height:44px;width:auto;margin:0 auto 30px}
+.closing h3{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:200;max-width:26ch;margin:0 auto 16px;line-height:1.25}
+.closing h3 em{color:var(--coral);font-style:italic}
+.closing p{color:rgba(255,255,255,.7);font-size:.9rem}
+.legal{max-width:70ch;margin:24px auto 0;font-size:.62rem;line-height:1.7;color:rgba(255,255,255,.4)}
+.closing .foot{margin-top:52px;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+
+/* ============ LIGHTBOX ============ */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(255,255,255,.98);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.35s var(--ease)}
+.lb.open{opacity:1;visibility:visible}
+.lb__stage{position:relative;width:min(92vw,1150px);height:78vh;display:flex;align-items:center;justify-content:center}
+.lb__stage img{max-width:100%;max-height:100%;object-fit:contain;transform:scale(.96);opacity:0;transition:.45s var(--ease);cursor:zoom-in;user-select:none}
+.lb.open .lb__stage img.ready{transform:scale(1);opacity:1}
+.lb__stage img.zoomed{transform:scale(1.9)!important;cursor:zoom-out}
+.lb__cap{position:absolute;left:0;right:0;bottom:20px;text-align:center}
+.lb__cap b{display:block;font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--coral);font-weight:700;margin-bottom:4px}
+.lb__cap span{font-size:.95rem;font-weight:300}
+.lb__cap small{display:block;font-size:.7rem;color:var(--gris);margin-top:6px;letter-spacing:.14em}
+.lb__btn{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid var(--linea);display:grid;place-items:center;transition:.3s;background:#fff}
+.lb__btn:hover{background:var(--coral);border-color:var(--coral);color:#fff}
+.lb__btn svg{width:20px;height:20px}
+.lb__close{top:22px;right:22px}
+.lb__prev{left:22px;top:50%;transform:translateY(-50%)}
+.lb__next{right:22px;top:50%;transform:translateY(-50%)}
+
+/* ============ WHATSAPP ============ */
+.wa{position:fixed;right:24px;bottom:24px;z-index:90;display:flex;align-items:center;gap:12px}
+.wa__icon{position:relative;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.2);transition:transform .3s}
+.wa__icon svg{width:31px;height:31px;fill:#fff;position:relative;z-index:1}
+.wa__label{background:var(--azul);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;border-radius:100px;opacity:0;transform:translateX(10px);transition:.35s;pointer-events:none}
+.wa:hover .wa__icon{transform:scale(1.08)}
+.wa:hover .wa__label{opacity:1;transform:none}
+.wa__icon::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;opacity:.5;animation:waPulse 2.2s infinite}
+@keyframes waPulse{to{transform:scale(1.6);opacity:0}}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1100px){ .prod{grid-template-columns:1fr 1fr;gap:32px} .intro__grid{grid-template-columns:1fr;gap:26px} }
+@media (max-width:860px){
+  .wrap{width:calc(100% - 32px)}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero__right{order:-1;height:62svh;min-height:360px}
+  .hero__curve--v{display:none}
+  .hero__curve--h{display:block;top:auto;bottom:-1px;left:0;width:100%;height:64px}
+  .hero__left{padding:34px 20px 108px}
+  .hero__top{padding:16px 20px}
+  .hero__top .eyebrow{display:none}
+  .prod{grid-template-columns:1fr}
+  .prod__fotos{gap:8px}
+  .lb__prev,.lb__next{top:auto;bottom:80px;transform:none}
+  .lb__stage{height:66vh}
+  .wa{right:16px;bottom:16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="#top" class="nav__logo" id="navLogo"></a>
+    <div class="nav__links" id="navLinks"></div>
+  </div>
+  <div class="nav__bar" id="navBar"></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__top">
+    <a href="#top" class="hero__logo" id="heroLogo"></a>
+    <span class="eyebrow" id="heroEyebrow"></span>
+  </div>
+
+  <div class="hero__left">
+    <svg class="hero__arcs" viewBox="0 0 720 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path class="a1" d="M-120 980 C 120 700 120 420 -120 120"/>
+      <path class="a2" d="M-60 980 C 200 700 200 420 -60 120"/>
+      <path class="a3" d="M-40 860 C 200 790 460 800 760 700"/>
+      <circle class="dot" cx="760" cy="700" r="3.5"/>
+    </svg>
+    <div class="hero__content">
+      <span class="hero__kicker eyebrow" id="heroKicker"></span>
+      <h1 class="marca" id="heroMarca"></h1>
+      <p class="hero__hook" id="heroHook"></p>
+      <p class="hero__sub" id="heroSub"></p>
+      <div class="cta">
+        <a href="#productos" class="btn btn--coral">Ver chaquetas
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a id="ctaWa" class="btn btn--line" target="_blank" rel="noopener">Hablar con Serranía</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__right">
+    <div class="hero__ph">Imagen de portada · img/portada.jpg</div>
+    <img class="hero__img" src="img/portada.jpg" alt="Colección BOLD" onerror="this.remove()">
+    <svg class="hero__curve hero__curve--v" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+      <path class="fill" d="M0 0 H100 C 18 250 18 750 100 1000 H0 Z"/>
+      <path class="line" d="M100 0 C 18 250 18 750 100 1000" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <svg class="hero__curve hero__curve--h" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true">
+      <path class="fill" d="M0 100 V60 C 300 -10 700 -10 1000 60 V100 Z"/>
+      <path class="line" d="M0 60 C 300 -10 700 -10 1000 60" vector-effect="non-scaling-stroke"/>
+    </svg>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
+</header>
+
+<section class="intro" id="productos">
+  <div class="wrap intro__grid rv">
+    <div>
+      <span class="eyebrow">La propuesta</span>
+      <h2 id="introTitulo"></h2>
+    </div>
+    <div>
+      <p id="introTexto"></p>
+      <div class="intro__tags" id="introTags"></div>
+    </div>
+  </div>
+</section>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <div class="chips" id="chips"></div>
+    <span class="counter" id="cTot"></span>
+  </div>
+</div>
+<div class="lista" id="lista"></div>
+
+<footer class="closing">
+  <div class="wrap">
+    <div class="logo" id="footLogo"></div>
+    <h3>Prendas que llevan la marca <em>a donde vaya el equipo.</em></h3>
+    <p>Diseño, desarrollo y personalización de colecciones corporativas · serrania.co</p>
+    <p class="legal">Los diseños presentados son propiedad intelectual e industrial de Serranía (Giraffe Inbound S.A.S.), protegidos por la Ley 23 de 1982, la Decisión Andina 486 de 2000 y el Código Penal Colombiano (arts. 270-272). Su reproducción o uso sin autorización está prohibido expresamente por el propietario de estos derechos.</p>
+    <div class="foot">© Serranía · BOLD</div>
+  </div>
+</footer>
+
+<a class="wa" id="wa" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <span class="wa__label">Escríbenos</span>
+  <span class="wa__icon"><svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4c-1.2-1.8-1.8-3.8-1.8-5.9 0-5.9 4.9-10.7 11-10.7s11 4.8 11 10.7-4.9 10.8-11 10.8zm6-8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></span>
+</a>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
+  <button class="lb__btn lb__close" id="lbClose" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb__btn lb__prev" id="lbPrev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <div class="lb__stage"><img id="lbImg" alt=""></div>
+  <button class="lb__btn lb__next" id="lbNext" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+  <div class="lb__cap"><b id="lbTag"></b><span id="lbTitle"></span><small id="lbCount"></small></div>
+</div>
+
+<script>
+/* =================================================================
+   1) TEXTOS GENERALES
+   ================================================================= */
+const CONFIG = {
+  cliente:     'BOLD',
+  kicker:      'Serranía × BOLD',
+  eyebrow:     'Propuesta de chaquetas corporativas',
+  hook:        'Dos chaquetas, <em>una misma actitud.</em>',
+  sub:         'Softshell y Aerofusion: abrigo técnico con acabados premium y personalización desarrollada para BOLD.',
+  introTitulo: 'Abrigo técnico <b>con sello propio.</b>',
+  introTexto:  'Dos siluetas pensadas para el uso diario del equipo: protección frente al viento y el frío, movilidad y una terminación limpia. Cada chaqueta se presenta con sus vistas de frente, espalda y lateral, y el detalle de la personalización aplicada.',
+  tags:        ['Bordado','Aplique','Estampado reflectivo'],
+  whatsapp:    '573170150598',
+  waMensaje:   'Hola, quiero más información sobre las chaquetas BOLD'
+};
+
+/* =================================================================
+   2) PRODUCTOS
+      vistas: fotos de cada versión, en orden
+      versiones: variaciones de personalización.
+        - la primera usa los nombres sin sufijo (frente.jpg)
+        - la segunda agrega el sufijo (frente-v2.jpg)
+   ================================================================= */
+const PRODUCTOS = [
+  {
+    id:'chaqueta-softshell', tipo:'Chaqueta', nombre:'Chaqueta Softshell',
+    categoria:'Unisex', tela:'Softshell con membrana cortaviento',
+    desc:'Chaqueta softshell con cierre completo, cuello alto y puños ajustables. Protege del viento y la llovizna, y mantiene libertad de movimiento.',
+    vistas:[['frente','Frente'],['posterior','Posterior'],['lateral','Lateral 1'],['lateral-2','Lateral 2']],
+    versiones:[
+      { id:'', nombre:'Personalización 1',
+        perso:[['Pecho','logo BOLD en aplique en relieve'],['Espalda','sin marcación']] },
+      { id:'v2', nombre:'Personalización 2',
+        perso:[['Pecho','logo BOLD en aplique en relieve'],['Espalda','logo BOLD grande en blanco, bordado']] }
+    ]
+  },
+  {
+    id:'chaqueta-aerofusion', tipo:'Chaqueta', nombre:'Chaqueta Aerofusion',
+    categoria:'Unisex', tela:'Tejido técnico liviano con relleno térmico',
+    desc:'Chaqueta liviana de alto desempeño térmico, con silueta ajustada al cuerpo y acabados que permiten usarla sola o como segunda capa.',
+    vistas:[['frente','Frente'],['posterior','Posterior'],['lateral','Lateral 1'],['lateral-2','Lateral 2']],
+    versiones:[
+      { id:'', nombre:'Personalización 1',
+        perso:[['Pecho','logo BOLD en aplique en relieve'],['Espalda','logo BOLD pequeño en aplique en relieve']] }
+    ]
+  }
+];
+
+/* ================================================================= */
+const EXT='.jpg';
+const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const pad=n=>String(n).padStart(2,'0');
+const ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg>';
+
+/* Logo Serranía (vector, no requiere archivo) */
+const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="617 516 143 32" fill="currentColor" role="img" aria-label="Serranía"><path d="M 651.484 541.199 C 650.964 541.718 650.292 542.007 649.593 542.019 C 648.859 542.015 648.304 541.785 647.855 541.332 L 638.796 532.281 L 641.972 527.964 L 651.628 537.570 C 652.078 538.023 652.320 538.640 652.308 539.312 C 652.296 540.011 652.003 540.683 651.484 541.199 M 653.101 530.304 L 641.988 519.164 L 636.113 529.578 L 629.320 522.726 L 619.699 542.222 C 619.644 542.316 619.667 542.375 619.695 542.429 C 619.695 542.429 620.570 544.152 620.582 544.171 C 620.628 544.238 620.746 544.253 620.816 544.128 L 629.304 531.531 L 632.945 535.195 L 628.886 542.382 C 628.843 542.453 628.839 542.535 628.878 542.613 L 629.722 544.179 C 629.757 544.257 629.894 544.273 629.960 544.179 L 635.070 537.339 L 640.511 542.851 C 642.171 544.519 644.402 545.457 646.75 545.371 C 649.074 545.332 651.273 544.398 652.941 542.734 C 656.410 539.277 656.484 533.699 653.101 530.304 "/><path d="M 677.535 527.5 C 677.753 529.699 677.906 531.238 678.117 533.363 C 677.785 533.554 677.742 533.285 677.636 533.078 C 677.078 532.007 676.812 531.207 676.132 530.218 C 675.078 528.683 673.367 527.738 671.468 527.812 C 670.378 527.851 669.417 528.062 668.957 529.125 C 668.468 530.246 668.566 531.355 669.335 532.343 C 669.964 533.144 670.835 533.625 671.753 534.007 C 672.937 534.496 674.152 534.921 675.316 535.457 C 676.085 535.812 676.847 536.242 677.511 536.769 C 679.871 538.644 679.332 542.042 677.324 543.695 C 676.042 544.753 674.542 545.265 672.910 545.296 C 671.734 545.320 670.550 545.191 669.378 545.074 C 668.355 544.972 666.113 544.929 665.941 544.953 C 665.730 542.804 665.546 540.960 665.339 538.843 C 665.699 538.687 665.75 538.917 665.835 539.128 C 666.398 540.566 667.156 541.785 668.296 542.871 C 669.871 544.363 671.609 544.699 673.632 544.128 C 674.859 543.781 675.621 543.046 675.804 541.765 C 675.976 540.570 675.476 539.613 674.5 539.007 C 673.503 538.386 672.425 537.890 671.351 537.414 C 670.066 536.843 668.773 536.312 667.632 535.464 C 665.730 534.046 664.992 531.980 665.714 529.937 C 666.277 528.351 667.523 527.554 669.062 527.121 C 670.351 526.761 671.667 526.789 672.976 526.968 C 674.457 527.167 675.972 527.449 677.535 527.5 "/><path d="M 738.460 543.042 C 738.445 542.75 738.445 542.453 738.441 542.160 C 738.429 539.925 738.453 537.691 738.394 535.464 C 738.363 534.292 737.777 533.355 736.722 532.816 C 735.238 532.054 733.757 532.156 732.347 533.042 C 731.953 533.292 731.578 533.574 731.101 533.906 L 731.101 532.539 C 731.101 532.480 731.066 532.464 731.011 532.457 C 730.941 532.445 730.835 532.449 730.550 532.507 C 729.410 532.726 729.058 532.792 727.921 533.027 C 727.796 533.050 727.613 533.113 727.636 533.183 C 727.671 533.265 727.714 533.382 727.753 533.507 C 727.917 534.042 728.121 534.535 728.113 535.339 C 728.097 537.820 728.101 539.109 728.113 541.589 C 728.117 542.445 727.816 543.875 727.714 544.312 C 727.625 544.687 727.589 544.785 727.570 544.851 C 727.550 544.898 727.566 544.953 727.656 544.953 L 731.726 544.953 C 731.820 544.953 731.828 544.867 731.792 544.835 C 731.699 544.75 731.453 544.488 731.394 544.378 C 731.199 544.007 731.121 543.710 731.121 543.015 C 731.117 540.234 731.113 537.929 731.121 535.148 C 731.121 535.011 731.203 534.824 731.308 534.746 C 732.093 534.164 732.921 533.375 733.945 533.433 C 734.855 533.488 735.453 533.941 735.457 534.855 C 735.468 537.531 735.464 539.398 735.457 542.074 C 735.457 542.800 735.273 543.484 735.121 544.183 C 735.031 544.601 734.984 544.746 734.949 544.851 C 734.929 544.902 734.953 544.941 735.035 544.941 L 739.128 544.941 C 739.183 544.941 739.230 544.863 739.183 544.824 C 739.062 544.742 738.488 543.761 738.460 543.042 "/><path d="M 744.585 542.687 C 744.578 540.140 744.574 533.699 744.574 532.582 C 744.574 532.488 744.535 532.414 744.441 532.437 C 744.273 532.460 744.140 532.480 744.015 532.503 C 742.875 532.726 742.75 532.738 741.613 532.972 C 741.488 533 741.281 533.042 741.328 533.128 C 741.359 533.210 741.406 533.328 741.441 533.453 C 741.605 533.988 741.585 534.535 741.578 535.339 L 741.574 541.589 C 741.578 542.445 741.320 544.785 741.296 544.851 C 741.273 544.906 741.312 544.953 741.386 544.953 L 744.894 544.953 C 744.976 544.953 744.984 544.886 744.964 544.832 C 744.789 544.394 744.585 543.382 744.585 542.687 "/><path d="M 722.511 543.101 C 722.511 543.230 722.402 543.402 722.289 543.476 C 721.566 543.980 720.75 544.367 719.871 544.363 C 718.425 544.355 717.515 543.308 717.667 541.867 C 717.781 540.812 718.277 540.203 719.117 539.550 C 720.125 538.761 721.246 538.546 722.523 538.234 C 722.523 540.136 722.527 541.285 722.511 543.101 M 725.878 544.859 C 725.871 544.804 725.851 544.753 725.847 544.738 C 725.781 544.554 725.5 543.269 725.515 542.285 C 725.542 540.453 725.539 538.621 725.519 536.785 C 725.492 534.562 724.406 533.054 722.437 532.558 C 720.875 532.167 719.304 532.238 717.769 532.761 C 716.960 533.039 716.218 533.421 715.652 534.082 C 715.074 534.753 714.945 535.628 715.324 536.210 C 715.687 536.773 716.796 537.160 717.488 536.984 C 717.496 536.984 717.511 536.976 717.511 536.957 C 717.550 536.519 717.554 536.078 717.644 535.656 C 717.929 534.339 718.589 533.449 720.003 533.128 C 721.335 532.832 722.417 533.437 722.503 534.734 C 722.558 535.585 722.511 536.445 722.511 537.308 C 722.367 537.351 722.242 537.390 722.117 537.425 C 720.675 537.855 719.218 538.230 717.804 538.730 C 717.078 538.984 716.355 539.363 715.761 539.843 C 714.140 541.148 714.292 543.554 716.070 544.621 C 717.804 545.664 719.621 545.574 721.406 544.687 C 721.769 544.507 722.109 544.277 722.527 544.031 L 722.527 545.097 C 722.527 545.203 722.578 545.246 722.675 545.234 C 724.042 545.093 724.449 545.089 725.812 544.953 C 725.867 544.945 725.886 544.914 725.878 544.859 "/><path d="M 686.917 538.187 C 686.105 538.187 685.292 538.183 684.480 538.191 C 684.25 538.191 684.121 538.136 684.121 537.875 C 684.109 536.582 684.300 535.496 685.007 534.382 C 685.558 533.511 686.460 533.070 687.378 533.035 C 688.335 533.027 689.019 533.324 689.75 534.664 C 690.277 535.636 690.320 536.582 690.308 537.875 C 690.308 538.136 690.179 538.191 689.949 538.191 C 689.925 538.187 689.902 538.191 689.878 538.187 C 689.882 538.191 689.882 538.195 689.882 538.195 C 689.882 538.195 689.882 538.195 689.878 538.195 C 689.097 538.195 687.699 538.187 686.917 538.187 M 693.437 539.101 C 693.433 539.062 693.429 538.222 693.351 537.664 C 693 535.128 692.136 533.488 689.652 532.664 C 689.277 532.542 688.824 532.425 688.449 532.371 C 688.101 532.312 687.746 532.285 687.386 532.292 C 687.382 532.292 687.378 532.292 687.378 532.292 C 686.703 532.300 686.003 532.414 685.300 532.613 C 682.792 533.312 681.433 535.128 681.082 537.664 C 680.769 539.945 681.246 542.039 682.980 543.667 C 684.722 545.304 686.843 545.597 689.101 545.167 C 690.402 544.921 691.523 544.312 692.355 543.253 C 692.484 543.089 692.515 542.847 692.589 542.640 C 691.132 543.285 689.722 543.632 688.203 543.441 C 685.972 543.156 684.441 541.496 684.246 539.101 Z M 693.437 539.101 "/><path d="M 714.082 533.710 C 714.039 533.093 713.683 532.636 713.078 532.441 C 712.425 532.230 711.777 532.296 711.183 532.597 C 710.554 532.917 709.960 533.304 709.355 533.671 C 709.140 533.804 708.937 533.953 708.644 534.152 C 708.644 533.347 708.644 532.753 708.644 532.523 C 708.644 532.457 708.609 532.425 708.519 532.437 C 708.347 532.457 708.210 532.480 708.085 532.503 C 706.941 532.726 706.785 532.738 705.648 532.972 C 705.523 533 705.394 533.027 705.386 533.125 C 705.386 533.207 705.441 533.328 705.480 533.453 C 705.644 533.992 705.652 534.535 705.648 535.339 C 705.628 537.820 705.632 539.105 705.644 541.593 C 705.648 542.445 705.523 543.875 705.421 544.308 C 705.335 544.687 705.300 544.785 705.277 544.851 C 705.246 544.917 705.312 544.953 705.367 544.953 L 708.937 544.953 C 708.996 544.953 709.039 544.910 709.003 544.832 C 708.781 544.343 708.652 543.707 708.652 543.011 C 708.648 541.296 708.644 538.097 708.644 535.570 C 708.648 535.566 708.652 535.386 708.656 535.386 C 708.656 535.312 708.656 535.414 708.656 535.343 C 708.656 535.214 708.726 535.027 708.820 534.976 C 709.292 534.710 709.777 534.410 710.277 534.199 C 710.546 534.085 710.808 534.035 711.042 534.257 C 711.492 534.683 711.566 534.980 712.136 535.328 C 712.441 535.511 712.937 535.488 713.234 535.347 C 713.777 535.089 714.128 534.417 714.082 533.710 "/><path d="M 746.066 527.089 C 745.496 526.933 744.968 526.796 744.433 526.652 C 744.386 526.640 744.304 526.667 744.285 526.718 C 743.691 528.121 743.109 529.492 742.535 530.855 C 742.894 531.105 743.417 531.085 743.632 530.785 C 744.101 530.140 745.632 527.730 746.082 527.152 C 746.097 527.132 746.097 527.097 746.066 527.089 "/><path d="M 703.847 533.710 C 703.804 533.093 703.445 532.636 702.843 532.441 C 702.191 532.230 701.542 532.296 700.945 532.597 C 700.316 532.917 699.722 533.304 699.117 533.671 C 698.902 533.804 698.699 533.953 698.406 534.152 C 698.406 533.347 698.406 532.753 698.406 532.523 C 698.406 532.457 698.375 532.425 698.285 532.437 C 698.109 532.457 697.976 532.480 697.847 532.503 C 696.707 532.726 696.550 532.738 695.410 532.972 C 695.285 533 695.160 533.027 695.152 533.125 C 695.148 533.207 695.203 533.328 695.242 533.453 C 695.406 533.992 695.417 534.535 695.410 535.339 C 695.394 537.820 695.398 539.105 695.410 541.593 C 695.414 542.445 695.285 543.875 695.187 544.308 C 695.101 544.687 695.062 544.785 695.042 544.851 C 695.011 544.917 695.074 544.953 695.128 544.953 L 698.699 544.953 C 698.757 544.953 698.804 544.910 698.769 544.832 C 698.546 544.343 698.417 543.707 698.414 543.011 C 698.414 541.296 698.410 538.097 698.410 535.570 C 698.414 535.566 698.417 535.386 698.421 535.386 C 698.421 535.312 698.421 535.414 698.421 535.343 C 698.421 535.214 698.488 535.027 698.582 534.976 C 699.058 534.710 699.542 534.410 700.039 534.199 C 700.312 534.085 700.570 534.035 700.804 534.257 C 701.257 534.683 701.332 534.980 701.902 535.328 C 702.207 535.511 702.703 535.488 703 535.347 C 703.542 535.089 703.894 534.417 703.847 533.710 "/><path d="M 753.968 543.101 C 753.964 543.230 753.855 543.402 753.746 543.476 C 753.019 543.980 752.207 544.367 751.324 544.363 C 749.882 544.355 748.972 543.308 749.125 541.867 C 749.234 540.812 749.734 540.203 750.570 539.550 C 751.582 538.761 752.699 538.546 753.976 538.234 C 753.976 540.136 753.980 541.285 753.968 543.101 M 757.335 544.859 C 757.328 544.804 757.308 544.753 757.300 544.738 C 757.238 544.554 756.957 543.269 756.972 542.285 C 757 540.453 756.996 538.621 756.972 536.785 C 756.945 534.562 755.859 533.054 753.894 532.558 C 752.328 532.167 750.761 532.238 749.222 532.761 C 748.417 533.039 747.675 533.421 747.109 534.082 C 746.531 534.753 746.402 535.628 746.777 536.210 C 747.144 536.773 748.253 537.160 748.945 536.984 C 748.949 536.984 748.964 536.976 748.964 536.957 C 749.007 536.519 749.007 536.078 749.101 535.656 C 749.386 534.339 750.046 533.449 751.460 533.128 C 752.789 532.832 753.875 533.437 753.957 534.734 C 754.011 535.585 753.968 536.445 753.968 537.308 C 753.824 537.351 753.699 537.390 753.570 537.425 C 752.132 537.855 750.675 538.230 749.261 538.730 C 748.535 538.984 747.812 539.363 747.214 539.843 C 745.597 541.148 745.746 543.554 747.527 544.621 C 749.261 545.664 751.074 545.574 752.863 544.687 C 753.226 544.507 753.566 544.277 753.984 544.031 L 753.984 545.097 C 753.984 545.203 754.035 545.246 754.128 545.234 C 755.5 545.093 755.906 545.089 757.265 544.953 C 757.324 544.945 757.343 544.914 757.335 544.859 "/></svg>`;
+
+function slot(src,label,cls='',tag='',title=''){
+  return `<figure class="slot ${cls}" data-tag="${tag}" data-title="${title}">
+    <img src="${src}" alt="${title} · ${label}" loading="lazy" data-base="${src}" onerror="imgError(this)">
+    <span class="slot-label">${label}</span>
+    <div class="ph">${ICON}<span>${label}</span><small>${src}</small></div>
+  </figure>`;
+}
+function imgError(img){
+  if(img.dataset.base && img.getAttribute('src')!==img.dataset.base){ img.src=img.dataset.base; return; }
+  img.closest('.slot').classList.add('empty');
+}
+
+/* Cabecera */
+$('#heroLogo').innerHTML = LOGO_SVG;
+$('#footLogo').innerHTML = LOGO_SVG;
+$('#navLogo').innerHTML = LOGO_SVG + `<span>${CONFIG.cliente}</span>`;
+$('#heroKicker').textContent = CONFIG.kicker;
+$('#heroEyebrow').textContent = CONFIG.eyebrow;
+$('#heroMarca').innerHTML = `<img src="img/logo-bold.png" alt="${CONFIG.cliente}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'w1',textContent:'${CONFIG.cliente}'}))">`;
+$('#heroHook').innerHTML = CONFIG.hook;
+$('#heroSub').textContent = CONFIG.sub;
+$('#introTitulo').innerHTML = CONFIG.introTitulo;
+$('#introTexto').textContent = CONFIG.introTexto;
+$('#introTags').innerHTML = CONFIG.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+const waLink = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.waMensaje)}`;
+$('#wa').href = waLink; $('#ctaWa').href = waLink;
+$('#marquee').innerHTML = (PRODUCTOS.map(p=>`<span>${p.nombre.toUpperCase()}</span>`).join('')+`<span>${CONFIG.cliente}</span><span>SERRANÍA</span>`).repeat(2);
+$('#navLinks').innerHTML = `<a href="#productos">Chaquetas</a><a id="navWa" target="_blank" rel="noopener">Contacto</a>`;
+$('#navWa').href = waLink;
+$('#cTot').textContent = `${pad(PRODUCTOS.length)} referencias`;
+
+/* Productos */
+$('#lista').innerHTML = PRODUCTOS.map((p,i)=>{
+  const base=`img/${p.id}/`, tag=`Colección ${CONFIG.cliente}`, title=p.nombre;
+  const v0=p.versiones[0];
+  const fotos = p.vistas.map(([v,lab])=>slot(base+v+EXT,lab,'v-'+v,tag,title)).join('');
+  const claves = p.vistas.map(([v])=>v).join(',');
+  const botones = p.versiones.length>1
+    ? `<div class="bloque"><h4>Variaciones de personalización</h4><div class="vars">${p.versiones.map((v,k)=>`<button class="var ${k===0?'active':''}" data-v="${v.id}" data-base="${base}" data-vistas="${claves}" data-i="${k}">${v.nombre}</button>`).join('')}</div></div>`
+    : '';
+  return `<article class="item" id="p-${p.id}">
+    <div class="wrap prod">
+      <div class="prod__fotos rv">
+        <span class="prod__ref">${pad(i+1)} · ${CONFIG.cliente}</span>
+        ${fotos}
+      </div>
+      <div class="rv">
+        <span class="prod__type">${p.tipo}</span>
+        <h3 class="prod__name"><b>${p.nombre}</b></h3>
+        <p class="prod__desc">${p.desc}</p>
+        <div class="ficha">
+          <div><span>Categoría</span><b>${p.categoria}</b></div>
+          <div><span>Tela principal</span><b>${p.tela}</b></div>
+          <div><span>Variaciones</span><b>${p.versiones.length===1?'Una personalización':p.versiones.length+' personalizaciones'}</b></div>
+        </div>
+        ${botones}
+        <div class="bloque">
+          <h4>Personalización</h4>
+          <ul class="perso" data-perso="${p.id}">${v0.perso.map(([k,v])=>`<li><span><b>${k}:</b> ${v}</span></li>`).join('')}</ul>
+        </div>
+      </div>
+    </div>
+  </article>`;
+}).join('');
+$('#chips').innerHTML = PRODUCTOS.map((p,i)=>`<button class="chip ${i===0?'active':''}" data-i="${i}">${p.nombre}</button>`).join('');
+
+/* Navegación vertical */
+const chips=$$('.chip'), items=$$('.item');
+chips.forEach((c,k)=>c.addEventListener('click',()=>items[k].scrollIntoView({behavior:'smooth',block:'start'})));
+const ioBar=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){
+  const i=items.indexOf(e.target); chips.forEach((c,k)=>c.classList.toggle('active',k===i));
+}}),{rootMargin:'-140px 0px -55% 0px'});
+items.forEach(el=>ioBar.observe(el));
+
+/* Cambio de variación: cambia fotos y lista de personalización */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('.var'); if(!b) return;
+  const item=b.closest('.item'), pid=item.id.replace('p-','');
+  const prod=PRODUCTOS.find(p=>p.id===pid), ver=prod.versiones[+b.dataset.i];
+  $$('.var',item).forEach(x=>x.classList.toggle('active',x===b));
+  b.dataset.vistas.split(',').forEach(v=>{
+    const fig=$('.v-'+v,item); if(!fig) return;
+    const img=$('img',fig);
+    const src = b.dataset.v ? `${b.dataset.base}${v}-${b.dataset.v}${EXT}` : img.dataset.base;
+    fig.classList.remove('empty'); img.style.opacity=.3;
+    img.onload=()=>img.style.opacity=1; img.src=src;
+  });
+  $('.perso',item).innerHTML = ver.perso.map(([k,v])=>`<li><span><b>${k}:</b> ${v}</span></li>`).join('');
+});
+
+/* Visor de imágenes */
+let lbList=[],lbIdx=0,lbOpen=false;
+const lb=$('#lb'), lbImg=$('#lbImg');
+function showLb(){
+  const f=lbList[lbIdx], img=$('img',f);
+  lbImg.classList.remove('ready','zoomed');
+  const label=$('.slot-label',f)?.textContent || $('.ph span',f).textContent;
+  setTimeout(()=>{ lbImg.src=img.currentSrc||img.src; lbImg.alt=img.alt; lbImg.onload=()=>lbImg.classList.add('ready'); if(lbImg.complete) lbImg.classList.add('ready'); },120);
+  $('#lbTag').textContent=f.dataset.tag;
+  $('#lbTitle').textContent=`${f.dataset.title} — ${label}`;
+  $('#lbCount').textContent=`${lbIdx+1} / ${lbList.length}`;
+}
+document.addEventListener('click',e=>{
+  const f=e.target.closest('.slot'); if(!f||f.classList.contains('empty')) return;
+  const scope=f.closest('.item')||document;
+  lbList=$$('.slot',scope).filter(s=>!s.classList.contains('empty'));
+  lbIdx=lbList.indexOf(f); lbOpen=true; lb.classList.add('open'); document.body.style.overflow='hidden'; showLb();
+});
+const closeLb=()=>{lb.classList.remove('open');lbOpen=false;document.body.style.overflow='';};
+const stepLb=d=>{lbIdx=(lbIdx+d+lbList.length)%lbList.length;showLb();};
+$('#lbClose').onclick=closeLb; $('#lbPrev').onclick=()=>stepLb(-1); $('#lbNext').onclick=()=>stepLb(1);
+lb.addEventListener('click',e=>{ if(e.target===lb||e.target.classList.contains('lb__stage')) closeLb(); });
+lbImg.addEventListener('click',()=>lbImg.classList.toggle('zoomed'));
+document.addEventListener('keydown',e=>{ if(!lbOpen) return; if(e.key==='Escape')closeLb(); if(e.key==='ArrowRight')stepLb(1); if(e.key==='ArrowLeft')stepLb(-1); });
+let tx=0; lb.addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx; if(Math.abs(d)>50) stepLb(d<0?1:-1);});
+
+/* Navegación y animaciones */
+const nav=$('#nav'), bar=$('#navBar'), hero=$('.hero');
+addEventListener('scroll',()=>{
+  const y=scrollY;
+  nav.classList.toggle('show', y>hero.offsetHeight*.7);
+  bar.style.width=(y/(document.documentElement.scrollHeight-innerHeight)*100)+'%';
+},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);} }),{threshold:.12});
+$$('.rv').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
